@@ -48,22 +48,18 @@ document.getElementById('volume-slider').addEventListener('input', function(){
     }
 })
 
-document.getElementById('audio-selection').addEventListener("change",function() {
-    if(document.getElementById('radio-air-horn').checked)
-    {
-        document.getElementById('horn-sound').src = "./assets/media/audio/air-horn.mp3"
-        document.getElementById('sound-image').src = "./assets/media/images/air-horn.svg"
-    }
-    else if(document.getElementById('radio-car-horn').checked)
-    {
-        document.getElementById('horn-sound').src = "./assets/media/audio/car-horn.mp3"
-        document.getElementById('sound-image').src = "./assets/media/images/car.svg"
-    }
-    else
-    {
-        document.getElementById('horn-sound').src = "./assets/media/audio/party-horn.mp3"
-        document.getElementById('sound-image').src = "./assets/media/images/party-horn.svg"
-    }
+document.getElementById('radio-air-horn').addEventListener('click',function(){
+    document.getElementById('horn-sound').src = "./assets/media/audio/air-horn.mp3"
+    document.getElementById('sound-image').src = "./assets/media/images/air-horn.svg"
+})
+document.getElementById('radio-car-horn').addEventListener('click',function(){
+    document.getElementById('horn-sound').src = "./assets/media/audio/car-horn.mp3"
+    document.getElementById('sound-image').src = "./assets/media/images/car.svg"
+})
+document.getElementById('radio-party-horn').addEventListener('click',function(){
+    document.getElementById('horn-sound').src = "./assets/media/audio/party-horn.mp3"
+    document.getElementById('sound-image').src = "./assets/media/images/party-horn.svg"
+}
 })
 
 document.getElementById('honk-btn').addEventListener('click', function(event){
